@@ -23,7 +23,9 @@
 .header {
   background-color: #f1f1f1;
   overflow-x: hidden;
-  clip-path: polygon(1% 0, 100% 0, 100% 92%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+  padding-bottom: 90px;
+  padding-top: 90px;
 }
 
 .header-img {
@@ -150,7 +152,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 10px;
+  line-height: 24px;
   text-transform: uppercase;
   color: #9e8c6c;
 }
@@ -166,10 +168,12 @@
 }
 /* FOOTER */
 .footer {
-    background-color: #f1f1f1;
-    overflow-x: hidden;
-    clip-path: polygon(0 19%, 100% 0, 100% 100%, 0% 100%);
-  }
+  background-color: #f1f1f1;
+  /* overflow-x: hidden; */
+  clip-path: polygon(0 19%, 100% 0, 100% 100%, 0% 100%);
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
 
 .footer-title {
   font-family: "Playfair Display", sans-serif;
@@ -191,20 +195,24 @@
   text-decoration: none;
 }
 
-.footer-icon {
-  display: flex;
-  justify-content: center;
+.footer-icon a{
+  display: inline-block;
+  margin-right: 20px;
   color: #0699a6;
 }
 
 .footer-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50px;
+  z-index: 1000;
 }
 
 .bi {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .horizontal-shape {
@@ -213,3 +221,81 @@
   height: 10px;
   background: #0699a6;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-details {
+    text-align: center !important;
+    margin-bottom: 100px !important;
+  }
+
+  .main-row {
+    flex-direction: column-reverse;
+  }
+
+  .col-lg-4 {
+    margin-bottom: 3rem;
+  }
+
+  .skill-detail,
+  .experience-detail {
+    margin: 0 10px;
+  }
+}
+
+/* @media only screen  and (max-width: 767px) {
+  .hero-details {
+    text-align: center !important;
+  }
+
+  .main-row {
+    flex-direction: column-reverse;
+  }
+
+  .col-lg-4 {
+    margin-bottom: 3rem;
+  }
+
+  .skill-detail,
+  .experience-detail {
+    width: 100%;
+  }
+} */
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .header {
+      padding-top: 2rem;
+    }
+    
+    .header-img {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-details {
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .header-btn {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .main-row {
+      flex-direction: column-reverse;
+    }
+    
+    .skill-detail {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+    
+    .experience-detail {
+      margin-left: 0;
+    }
+  }
